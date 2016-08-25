@@ -23,6 +23,24 @@ describe('welcome page', function(){
     assert.equal(breakInput.getValue(), '5:00');
   });
 
+  it('should have a default starting time', function() {
+    let timerDisplay = browser.element('.timer-display');
+
+    assert.equal(timerDisplay.getText(), '25:00');
+  });
+
+  it('should have a way to set a new work time', function() {
+    browser.url('/');
+
+    let timerDisplay = browser.element('.timer-display');
+    let workInput = browser.element('.work-input');
+
+    workInput.setValue('10:00');
+    browser.click('.start-timer');
+
+    assert.equal(timerDisplay.getText(), '10:00');
+  });
+
   it.skip('should have a button to start the timer', function() {
     browser.url('/');
     let startButton = browser.element('.start-timer');
