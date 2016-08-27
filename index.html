@@ -6,10 +6,12 @@
 </head>
 <body>
   <h1>Pompodoro</h1>
-  <h2 class='timer-display'>25:00</h2>
-  <button class='start-timer'>Start</button>
-  <input type="text" class='work-input' placeholder="Set work time">
-  <input type="text" class='break-input' placeholder="Set break time">
+  <p class='work-display'>25:00</p>
+  <p class='break-display hidden'>5:00</p> 
+  <input type="number" value='25' class='work-input'>
+  <button class='start-timer'>Start Work</button>
+  <input type="number" value='5' class='break-input'>
+  <button class='break-timer' disabled>Start Break</button>
 
   <script src="main.bundle.js"></script>
 </body>

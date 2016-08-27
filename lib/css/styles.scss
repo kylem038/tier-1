@@ -4,6 +4,12 @@ body {
   color: $primary-text-color
 }
 
-h1 {
-  color: blue;
+p {
+  font-size: 100px;
+}
+
+.show {display: block};
+
+.hidden {
+  display: none;
 }
