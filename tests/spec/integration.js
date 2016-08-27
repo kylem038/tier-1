@@ -41,12 +41,24 @@ describe('welcome page', function(){
     assert.equal(timerDisplay.getText(), '10:00');
   });
 
+  it.skip('should have a way change work time', function() {
+    browser.url('/');
+
+    let timerDisplay = browser.element('.timer-display');
+    let workInput = browser.element('.work-input');
+
+    browser.click('.work-input');
+
+    assert.equal(timerDisplay.getText(), '26:00');
+  });
+
   it.skip('should have a button to start the timer', function() {
     browser.url('/');
     let startButton = browser.element('.start-timer');
+    let timerDisplay = browser.element('.timer-display');
 
     browser.click(startButton);
 
-    assert.equal();
+    assert.notEqual(timerDisplay.getText(), '25:00');
   });
 });
