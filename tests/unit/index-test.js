@@ -42,7 +42,7 @@ describe('our clock', function () {
     assert.equal(clock.endTime, (time+10));
   });
 
-  it('should have a function to find timeInBetween', function() {
+  it.skip('should have a function to find timeInBetween', function() {
     let clock = new Clock(10);
     let time = Date.now();
     clock.start(time);
