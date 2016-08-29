@@ -112,17 +112,18 @@ $primary-text-color: white;
   }
 
   button {
-    background: white;
+    background: rgba(8, 38, 64, .9);
     border: 1px solid grey;
     border-radius: 10px;
-    color: black;
+    color: #F7F6F0;
     font-size: 35px;
     height: 125px;
     width: 200px;
     text-align: center;
 
     &:hover{
-      background: magenta;
+      background: #F2E3D5;
+      color:#082640;
     }
   }
 
