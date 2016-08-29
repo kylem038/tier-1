@@ -8,6 +8,21 @@ describe('our test bundle', function () {
 });
 
 describe('our clock', function () {
+
+  let dateNow;
+  let now = Date.now();
+
+  beforeEach(function () {
+    dateNow = Date.now;
+    Date.now = function () {
+      return now;
+    };
+  });
+
+  afterEach(function () {
+    Date.now = dateNow;
+  });
+
   it('is an object', function () {
     let clock = new Clock();
     assert.isObject(clock);
@@ -36,20 +51,35 @@ describe('our clock', function () {
   });
 
   it('should have a function to find the endTime', function() {
-    let clock = new Clock(10);
-    let time = Date.now();
+    let duration = 10;
+    let clock = new Clock(duration);
+    let time = now;
     clock.start(time);
-    assert.equal(clock.endTime, (time+10));
+    assert.equal(clock.endTime, (clock.startTime+10));
   });
 
-  it.skip('should have a function to find timeInBetween', function() {
-    let clock = new Clock(10);
-    let time = Date.now();
+  it('should have a function to find timeInBetween', function() {
+    let duration = 10;
+    let clock = new Clock(duration);
+    let time = now;
     clock.start(time);
-    clock.endTime();
     assert.equal(clock.timeInBetween, (clock.endTime - time));
   });
 
+  it('should have a function to find timeElapsed', function() {
+    let duration = 10;
+    let clock = new Clock(duration);
+    let time = now;
+    clock.start(time);
+    assert.equal(clock.timeElapsed, (now - clock.startTime));
+  });
 
+  it('should have a function to find the time isExpired', function() {
+    let duration = 0;
+    let clock = new Clock(duration);
+    let time = now;
+    clock.start(time);
+    assert.equal(clock.isExpired, true);
+  });
 
 });
