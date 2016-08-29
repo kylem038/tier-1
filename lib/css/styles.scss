@@ -1,14 +1,81 @@
-$primary-text-color: #F00;
+$primary-text-color: white;
 
 body {
-  color: $primary-text-color
+  background: black;
+  text-align: center;
 }
 
-p {
+// .container {
+//   display: flex;
+//   flex-direction: column;
+//   text-align: center;
+// }
+
+h1 {
+  color: white;
   font-size: 100px;
 }
 
-.show {display: block};
+p {
+  font-color: black;
+  font-size: 100px;
+  padding: 0;
+}
+
+
+input {
+border-radius: 10px;
+font-size: 35px;
+height: 125px;
+margin-bottom: 20px;
+width: 500px;
+}
+
+button {
+  background: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+  color: black;
+  font-size: 35px;
+  height: 125px;
+  width: 200px;
+  text-align: center;
+
+  &:hover{
+    background: magenta;
+  }
+}
+
+.work-display {
+  border: 10px solid white;
+  border-radius: 20px;
+  background: rgba(202, 204, 206, .5);
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 0;
+  text-align: center;
+}
+
+.break-display {
+  border: 10px solid white;
+  border-radius: 20px;
+  background: rgba(202, 204, 206, .5);
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 0;
+  text-align: center;
+}
+
+
+.work-input {
+  margin-top: 800px;
+}
+
+
+
+.show {
+  display: block
+};
 
 .hidden {
   display: none;
