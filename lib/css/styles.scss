@@ -1,82 +1,202 @@
 $primary-text-color: white;
 
-body {
-  background: black;
-  text-align: center;
-}
+// body {
+//   background-image: url(/lib/css/images/occult_1200px.jpg);
+//   background-size: cover;
+//   display: flex;
+//   justify-content: center;
+//   color: white;
+//   height: 100vh;
+//   width: 100vw;
+// }
+//
+// h1 {
+//   font-family: BanglaSangamMN-Bold;
+//   font-size: 36px;
+//   color: #F7F6F0;
+// }
+//
+// span {
+//   font-family: Helvetica-Light;
+//   font-size: 36px;
+//   color: #77C4D3;
+// }
+//
+// p {
+//   font-color: black;
+//   font-size: 80px;
+//   padding: 0;
+// }
 
+
+// input {
+// border-radius: 10px;
+// font-size: 35px;
+// height: 125px;
+// margin-bottom: 20px;
+// width: 500px;
+// }
+//
+// button {
+//   background: white;
+//   border: 1px solid grey;
+//   border-radius: 10px;
+//   color: black;
+//   font-size: 35px;
+//   height: 125px;
+//   width: 200px;
+//   text-align: center;
+//
+//   &:hover{
+//     background: magenta;
+//   }
+// }
+//
 // .container {
 //   display: flex;
 //   flex-direction: column;
 //   text-align: center;
 // }
-
-h1 {
-  color: white;
-  font-size: 100px;
-}
-
-p {
-  font-color: black;
-  font-size: 100px;
-  padding: 0;
-}
-
-
-input {
-border-radius: 10px;
-font-size: 35px;
-height: 125px;
-margin-bottom: 20px;
-width: 500px;
-}
-
-button {
-  background: white;
-  border: 1px solid grey;
-  border-radius: 10px;
-  color: black;
-  font-size: 35px;
-  height: 125px;
-  width: 200px;
-  text-align: center;
-
-  &:hover{
-    background: magenta;
-  }
-}
-
-.work-display {
-  border: 10px solid white;
-  border-radius: 20px;
-  background: rgba(202, 204, 206, .5);
-  margin-left: 200px;
-  margin-right: 200px;
-  padding: 0;
-  text-align: center;
-}
-
-.break-display {
-  border: 10px solid white;
-  border-radius: 20px;
-  background: rgba(202, 204, 206, .5);
-  margin-left: 200px;
-  margin-right: 200px;
-  padding: 0;
-  text-align: center;
-}
+//
+// .work-display {
+//   border: 10px solid white;
+//   border-radius: 20px;
+//   background: rgba(202, 204, 206, .5);
+//   margin-left: 200px;
+//   margin-right: 200px;
+//   padding: 0;
+//   text-align: center;
+// }
+//
+// .break-display {
+//   border: 10px solid white;
+//   border-radius: 20px;
+//   background: rgba(202, 204, 206, .5);
+//   margin-left: 200px;
+//   margin-right: 200px;
+//   padding: 0;
+//   text-align: center;
+// }
 
 
-.work-input {
-  margin-top: 800px;
-}
+// .work-input {
+//   margin-top: 800px;
+// }
 
 
 
 .show {
-  display: block
-};
+  display: block;
+}
+
+.show-dropdown {
+  display: inline-block;
+}
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 600px) {
+
+  html {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  body {
+    background-image: url(/lib/css/images/occult_1200px.jpg);
+    background-size: cover;
+    display: flex;
+    color: white;
+  }
+
+  button {
+    background: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: black;
+    font-size: 35px;
+    height: 125px;
+    width: 200px;
+    text-align: center;
+
+    &:hover{
+      background: magenta;
+    }
+  }
+
+  h1 {
+    font-family: BanglaSangamMN-Bold;
+    font-size: 36px;
+    text-align: center;
+    color: #F7F6F0;
+    border: 10px solid white;
+    border-radius: 20px;
+    background: rgba(8, 38, 64, .9);
+    padding: 10px;
+  }
+
+  h2 {
+    display: none;
+    font-size: 85%;
+  }
+
+  input {
+    display: none;
+    color: white;
+    background: rgba(8, 38, 64, .9);
+    margin: 4px;
+    height: auto;
+    width: 45%;
+  }
+
+  span {
+    font-family: Helvetica-Light;
+    font-size: 36px;
+    color: #77C4D3;
+  }
+
+  .drop-down-icon {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background: url(/lib/css/images/dropdown-pomodoro.png);
+    background-size: cover;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 17%;
+    align-items: center;
+    margin-left: 19.5%;
+
+  }
+
+  .work-display {
+    border: 10px solid white;
+    border-radius: 20px;
+    background: rgba(8, 38, 64, .9);
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 250px;
+  }
+
+  .break-display {
+    border: 10px solid white;
+    border-radius: 20px;
+    background: rgba(8, 38, 64, .9);
+    text-align: center;
+  }
+
+  .dropdown-container {
+    width: 100px;
+    position: absolute;
+    top: 49px;
+    left: 50px;
+  }
+
 }

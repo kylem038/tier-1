@@ -5,15 +5,20 @@
   <title>Kyle Misencik & Ben Godfrey - Tier 1 Turing</title>
 </head>
 <body>
-<section class='container'>
-  <h1>Pompodoro</h1>
-  <p class='work-display'>25:00</p>
-  <p class='break-display hidden'>5:00</p>
-  <input type="number" value='25' min=0 max=120 class='work-input'>
-  <button class='start-timer'>Start Work</button><br>
-  <input type="number" value='5' min=0 max=120 class='break-input'>
-  <button class='break-timer' disabled>Start Break</button>
-</section>
+  <div class='drop-down-icon'></div>
+  <section class='dropdown-container'>
+    <h2>Work:</h2>
+    <input type="number" value='25' min=0 max=120 class='work-input'>
+    <h2>Break:</h2>
+    <input type="number" value='5' min=0 max=120 class='break-input'>
+  </section>
+  <section class='container'>
+  <h1>Un<span>wind</span></h1>
+    <p class='work-display'>25:00</p>
+    <p class='break-display hidden'>5:00</p>
+    <button class='start-timer'>Start Work</button><br>
+    <button class='break-timer' disabled>Start Break</button>
+  </section>
   <script src="main.bundle.js"></script>
 </body>
 </html>
