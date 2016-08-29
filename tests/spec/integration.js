@@ -41,14 +41,34 @@ describe('welcome page', function(){
     assert.equal(workDisplay.getText(), '10:00');
   });
 
+  it('should disable the breakTimerButton by default', function(){
+    browser.url('/');
+    let breakTimerButton = browser.element('.break-timer');
+    assert.equal(breakTimerButton.isEnabled(), false);
+  });
 
-  it('should have a button to start the timer', function() {
+  it('should have a button to start the work timer', function() {
     browser.url('/');
     let workDisplay = browser.element('.work-display');
 
-    browser.click('.start-timer');
+    browser.click('.work-timer');
 
     assert.notEqual(workDisplay.getText(), '25:00');
+  });
+
+  it('should disable both buttons if the work clock is running', function() {
+    let breakTimerButton = browser.element('.break-timer');
+    let workTimerButton = browser.element('.work-timer');
+
+    assert.equal(breakTimerButton.isEnabled(), false);
+    assert.equal(workTimerButton.isEnabled(), false);
+  });
+
+  it('should disable the workTimerButton once it work time expires', function(){
+    let workTimerButton = browser.element('.work-timer');
+    browser.waitForText('.break-display', 6000);
+
+    assert.equal(workTimerButton.isEnabled(), false);
   });
 
   it('should have a way to set a break time', function() {
@@ -57,9 +77,25 @@ describe('welcome page', function(){
     let breakInput = browser.element('.break-input');
 
 
-    browser.waitForText('.break-display', 6000);
     breakInput.setValue('10');
     browser.click('.break-display');
     assert.equal(breakDisplay.getText(), '10:00');
   });
+
+  it('should have a button to start the work timer', function() {
+    let breakDisplay = browser.element('.work-display');
+    browser.click('.break-timer');
+
+    assert.notEqual(breakDisplay.getText(), '10:00');
+  });
+
+
+  it('should disable both buttons if the break clock is running', function() {
+    let breakTimerButton = browser.element('.break-timer');
+    let workTimerButton = browser.element('.work-timer');
+
+    assert.equal(breakTimerButton.isEnabled(), false);
+    assert.equal(workTimerButton.isEnabled(), false);
+  });
+
 });
