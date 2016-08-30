@@ -10,6 +10,7 @@ describe('welcome page', function(){
   it('should have an input field for work time', function() {
     let workInput = browser.element('.work-input');
 
+    browser.click('.drop-down-icon');
     workInput.setValue('25');
 
     assert.equal(workInput.getValue(), '25');
@@ -35,6 +36,7 @@ describe('welcome page', function(){
     let workDisplay = browser.element('.work-display');
     let workInput = browser.element('.work-input');
 
+    browser.click('.drop-down-icon');
     workInput.setValue('10');
     browser.click('.work-display');
 
@@ -76,7 +78,7 @@ describe('welcome page', function(){
     let breakDisplay = browser.element('.break-display');
     let breakInput = browser.element('.break-input');
 
-
+    browser.click('.drop-down-icon');
     breakInput.setValue('10');
     browser.click('.break-display');
     assert.equal(breakDisplay.getText(), '10:00');
