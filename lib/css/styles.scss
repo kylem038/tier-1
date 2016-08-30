@@ -105,7 +105,7 @@ $primary-text-color: white;
   }
 
   body {
-    background-image: url(/lib/css/images/occult_1200px.jpg);
+    background-image: url(/lib/css/images/pom-landscape.jpeg);
     background-size: cover;
     display: flex;
     color: white;
@@ -132,24 +132,26 @@ $primary-text-color: white;
     font-size: 36px;
     text-align: center;
     color: #F7F6F0;
-    border: 10px solid white;
+    border: 5px solid white;
     border-radius: 20px;
     background: rgba(8, 38, 64, .9);
     padding: 10px;
+    margin-bottom: 15px;
   }
 
   h2 {
     display: none;
-    font-size: 85%;
+    font-size: 100%;
   }
 
   input {
-    display: none;
-    color: white;
     background: rgba(8, 38, 64, .9);
+    color: white;
+    display: none;
+    font-size: 30px;
     margin: 4px;
-    height: auto;
-    width: 45%;
+    height: 80px;
+    width: 80%;
   }
 
   span {
@@ -169,7 +171,7 @@ $primary-text-color: white;
   .container {
     display: flex;
     flex-direction: column;
-    margin-top: 17%;
+    margin-top: 15%;
     align-items: center;
     margin-left: 19.5%;
 
@@ -184,13 +186,19 @@ $primary-text-color: white;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 250px;
+    margin-bottom: 15px;
   }
 
   .break-display {
     border: 10px solid white;
     border-radius: 20px;
     background: rgba(8, 38, 64, .9);
+    font-size: 2em;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 250px;
+    margin-bottom: 15px;
   }
 
   .dropdown-container {
