@@ -1,88 +1,114 @@
 $primary-text-color: white;
 
-// body {
-//   background-image: url(/lib/css/images/occult_1200px.jpg);
-//   background-size: cover;
-//   display: flex;
-//   justify-content: center;
-//   color: white;
-//   height: 100vh;
-//   width: 100vw;
-// }
-//
-// h1 {
-//   font-family: BanglaSangamMN-Bold;
-//   font-size: 36px;
-//   color: #F7F6F0;
-// }
-//
-// span {
-//   font-family: Helvetica-Light;
-//   font-size: 36px;
-//   color: #77C4D3;
-// }
-//
-// p {
-//   font-color: black;
-//   font-size: 80px;
-//   padding: 0;
-// }
+html {
+  height: 100vh;
+  width: 100vw;
+}
 
+body {
+  background-image: url(/lib/css/images/pom-landscape.jpeg);
+  background-size: cover;
+  display: flex;
+  color: white;
+}
 
-// input {
-// border-radius: 10px;
-// font-size: 35px;
-// height: 125px;
-// margin-bottom: 20px;
-// width: 500px;
-// }
-//
-// button {
-//   background: white;
-//   border: 1px solid grey;
-//   border-radius: 10px;
-//   color: black;
-//   font-size: 35px;
-//   height: 125px;
-//   width: 200px;
-//   text-align: center;
-//
-//   &:hover{
-//     background: magenta;
-//   }
-// }
-//
-// .container {
-//   display: flex;
-//   flex-direction: column;
-//   text-align: center;
-// }
-//
-// .work-display {
-//   border: 10px solid white;
-//   border-radius: 20px;
-//   background: rgba(202, 204, 206, .5);
-//   margin-left: 200px;
-//   margin-right: 200px;
-//   padding: 0;
-//   text-align: center;
-// }
-//
-// .break-display {
-//   border: 10px solid white;
-//   border-radius: 20px;
-//   background: rgba(202, 204, 206, .5);
-//   margin-left: 200px;
-//   margin-right: 200px;
-//   padding: 0;
-//   text-align: center;
-// }
+button {
+  background: rgba(8, 38, 64, .9);
+  border: 1px solid grey;
+  border-radius: 10px;
+  color: #F7F6F0;
+  font-size: 35px;
+  height: 125px;
+  width: 200px;
+  text-align: center;
 
+  &:hover{
+    background: #F2E3D5;
+    color:#082640;
+  }
+}
 
-// .work-input {
-//   margin-top: 800px;
-// }
+h1 {
+  font-family: BanglaSangamMN-Bold;
+  font-size: 36px;
+  text-align: center;
+  color: #F7F6F0;
+  border: 5px solid white;
+  border-radius: 20px;
+  background: rgba(8, 38, 64, .9);
+  padding: 10px;
+  margin-bottom: 15px;
+}
 
+h2 {
+  display: none;
+  font-size: 100%;
+}
+
+input {
+  background: rgba(8, 38, 64, .9);
+  color: white;
+  display: none;
+  font-size: 30px;
+  margin: 4px;
+  height: 80px;
+  width: 80%;
+}
+
+span {
+  font-family: Helvetica-Light;
+  font-size: 36px;
+  color: #77C4D3;
+}
+
+.drop-down-icon {
+  display: block;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  background: url(/lib/css/images/dropdown-pomodoro.png);
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  align-items: center;
+  margin: auto;
+
+}
+
+.work-display {
+  border: 10px solid white;
+  border-radius: 20px;
+  background: rgba(8, 38, 64, .9);
+  font-size: 2em;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+.break-display {
+  border: 10px solid white;
+  border-radius: 20px;
+  background: rgba(8, 38, 64, .9);
+  font-size: 2em;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+.dropdown-container {
+  width: 100px;
+  position: absolute;
+  top: 49px;
+  left: 50px;
+}
 
 
 .show {
@@ -162,6 +188,7 @@ $primary-text-color: white;
 
   .drop-down-icon {
     display: block;
+    position: fixed;
     height: 50px;
     width: 50px;
     background: url(/lib/css/images/dropdown-pomodoro.png);
@@ -171,9 +198,9 @@ $primary-text-color: white;
   .container {
     display: flex;
     flex-direction: column;
-    margin-top: 15%;
+    padding-top: 80px;
     align-items: center;
-    margin-left: 19.5%;
+    margin: auto;
 
   }
 
