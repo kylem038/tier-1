@@ -162,6 +162,7 @@ $primary-text-color: white;
 
   .drop-down-icon {
     display: block;
+    position: fixed;
     height: 50px;
     width: 50px;
     background: url(/lib/css/images/dropdown-pomodoro.png);
@@ -171,9 +172,9 @@ $primary-text-color: white;
   .container {
     display: flex;
     flex-direction: column;
-    margin-top: 15%;
+    padding-top: 80px;
     align-items: center;
-    margin-left: 19.5%;
+    margin: auto;
 
   }
 
