@@ -82,11 +82,4 @@ describe('our clock', function () {
     assert.equal(clock.isExpired, true);
   });
 
-  it('should have a function that displays the type of clock', function() {
-    let clock = new Clock();
-    let target = 'work';
-    clock.typeOfClock(target);
-    assert.equal(clock.typeOfClock(target), 'work');
-  });
-
 });
