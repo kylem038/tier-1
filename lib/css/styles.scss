@@ -30,7 +30,7 @@ button {
 
 h1 {
   font-family: BanglaSangamMN-Bold;
-  font-size: 36px;
+  font-size: 50px;
   text-align: center;
   color: #F7F6F0;
   border: 5px solid white;
@@ -60,7 +60,7 @@ input {
 
 span {
   font-family: Helvetica-Light;
-  font-size: 36px;
+  font-size: 50px;
   color: #77C4D3;
 }
 
@@ -79,14 +79,13 @@ span {
   padding-top: 80px;
   align-items: center;
   margin: auto;
-
 }
 
 .work-display {
   border: 10px solid white;
   border-radius: 20px;
   background: rgba(8, 38, 64, .9);
-  font-size: 2em;
+  font-size: 4em;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -98,12 +97,20 @@ span {
   border: 10px solid white;
   border-radius: 20px;
   background: rgba(8, 38, 64, .9);
-  font-size: 2em;
+  font-size: 4em;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
   width: 250px;
   margin-bottom: 15px;
+}
+
+.desktop-column {
+  display: flex;
+}
+
+button.break-timer {
+  margin-left: 30px;
 }
 
 .dropdown-container {
@@ -235,6 +242,15 @@ button:disabled {
     padding-bottom: 10px;
     width: 250px;
     margin-bottom: 15px;
+  }
+
+  .desktop-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button.break-timer {
+    margin-left: 0;
   }
 
   .dropdown-container {
